@@ -23,18 +23,34 @@
 // 22 3 9 -> 22
 
 
-Console.Write("введите число1: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("введите число2: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("введите число3: ");
-int num3 = Convert.ToInt32(Console.ReadLine());
-if (num1 > num2 & num1 > num3) {
-Console.WriteLine("max = " + num1);
-}
-else if (num2 > num3 & num2 > num1) {
-Console.WriteLine("max = " + num2);
+// Console.Write("введите число1: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("введите число2: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("введите число3: ");
+// int num3 = Convert.ToInt32(Console.ReadLine());
+// if (num1 > num2 & num1 > num3) {
+// Console.WriteLine("max = " + num1);
+// }
+// else if (num2 > num3 & num2 > num1) {
+// Console.WriteLine("max = " + num2);
+// }
+// else {
+//     Console.WriteLine("max = " + num3);
+// }
+
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
+
+Console.Write("введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num % 2 == 1 || num % 2 == -1){
+Console.WriteLine("no");
 }
 else {
-    Console.WriteLine("max = " + num3);
+Console.WriteLine("yes");
 }
