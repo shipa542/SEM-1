@@ -31,24 +31,75 @@
 // 9012 -> 12
 
 
-Console.Write("введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int sum = 0;
+// Console.Write("введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
 
-while (num > 0)
-{
-    int i = num % 10;
-    num = num / 10;
-    sum = sum + i;
-}
+// while (num > 0)
+// {
+//     int i = num % 10;
+//     num = num / 10;
+//     sum = sum + i;
+// }
 
-Console.WriteLine("Сумма всех цифр в числе равна: " + sum);
-
-
+// Console.WriteLine("Сумма всех цифр в числе равна: " + sum);
 
 
 
 
 
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// 6, 1, 33 -> [6, 1, 33]
 
 
+
+
+// int[] num = new int[8];
+// Console.Write("[");
+
+// for (int  i = 0;  i < num.Length; i++)
+// {
+//     num [i] = new Random().Next(0, 11);
+//     Console.Write(" "+ Massiv (i) + ","+" ");
+// }
+// Console.Write("]");
+
+//  int Massiv (int N)
+//  {
+//     return num[N];
+//  }
+
+// Второе решение задачи=)
+
+// int[] CreateRandomArray(int start, int end)
+// {
+//     int[] RandomArray = new int[8];
+//     for (int i = 0; i < 8; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end +1);
+//         Console.Write(RandomArray[i] +",");
+//     }
+//     return RandomArray;
+// }
+
+//  void ShowArray(int[] array)
+//  {  Console.Write(" -> [");
+//    for (int i = 0; i < array.Length; i++)
+//    {
+//     Console.Write(array[i] + ",");
+//    } 
+//    Console.Write("]");
+//    Console.WriteLine();
+//  }
+
+
+//  Console.Write("Введите первое число случайно генерируемого диапазона:");
+//  int min = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите последнее число случайно генерируемого диапазона:");
+//  int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] MyRandomArray = CreateRandomArray(min, max);
+// ShowArray(MyRandomArray);
