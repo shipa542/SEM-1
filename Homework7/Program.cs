@@ -19,31 +19,31 @@
 // Console.Clear();
 // Console.WriteLine($"m = {m}, n = {n}.");
 
-// int[,] array = new int[m, n];
+// int[,] arrayay = new int[m, n];
 
-// CreateArrayint(array);
+// CreateArrayayint(arrayay);
 
-// WriteArray(array);
+// WriteArrayay(arrayay);
 
 // Console.WriteLine();
 
-// void CreateArrayint(int[,] array)
+// void CreateArrayayint(int[,] arrayay)
 // {
 //   for (int i = 0; i < m; i++)
 //   {
 //     for (int j = 0; j < n; j++)
 //     {
-//       array[i, j] = new Random().Nextint() * 20 - 10;
+//       arrayay[i, j] = new Random().Nextint() * 20 - 10;
 //     }
 //   }
 // }
 
-// void WriteArray (int[,] array){
+// void WriteArrayay (int[,] arrayay){
 // for (int i = 0; i < m; i++)
 //   {
 //       for (int j = 0; j < n; j++)
 //       {
-//         int alignNumber = Math.Round(array[i, j], 1);
+//         int alignNumber = Math.Round(arrayay[i, j], 1);
 //         Console.Write(alignNumber + " ");
 //       }
 //       Console.WriteLine();
@@ -52,7 +52,15 @@
 
 
 
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
+// Например, задан массив:
+
+// 1 4 7 2
+
+// 5 9 2 3
+
+// 8 4 2 4
 
 
 
@@ -60,7 +68,7 @@
 
 // Console.Clear();
 
-// int[,] GetArray(int m, int n, int minValue, int maxValue) // создает двумерный массив
+// int[,] GetArrayay(int m, int n, int minValue, int maxValue) // создает двумерный массив
 // {
 // int[,] result = new int[m, n];
 // for (int i = 0; i < m; i++)
@@ -73,13 +81,13 @@
 // return result;
 
 // }
-// void PrintArray(int[,] inArray) // вывводит двумерный массив
+// void PrintArrayay(int[,] inArrayay) // вывводит двумерный массив
 // {
-// for (int row = 0; row < inArray.GetLength(0); row++)
+// for (int row = 0; row < inArrayay.GetLength(0); row++)
 // {
-// for (int column = 0; column < inArray.GetLength(1); column++)
+// for (int column = 0; column < inArrayay.GetLength(1); column++)
 // {
-// Console.Write($"{inArray[row,column]} ");
+// Console.Write($"{inArrayay[row,column]} ");
 // }
 // Console.WriteLine();
 // }
@@ -91,8 +99,8 @@
 // Console.Write("Введите количество столбцов массива: ");
 // int columns=Convert.ToInt32(Console.ReadLine());
 
-// int[,] array = GetArray(rows, columns, 0, 10);
-// PrintArray(array);
+// int[,] arrayay = GetArrayay(rows, columns, 0, 10);
+// PrintArrayay(arrayay);
 
 
 // Console.Write("Введите индекс строки массива: ");
@@ -103,10 +111,48 @@
 
 // Console.Write($"{m}-{n}");
 
-// if (m < array.GetLength(0) && n < array.GetLength(1)){
+// if (m < arrayay.GetLength(0) && n < arrayay.GetLength(1)){
 //     Console.WriteLine (" -> такое число есть ");
 // }
 // else{
 //     Console.WriteLine (" -> такого числа нет ");
     
 // }
+
+
+
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+
+
+// Random random = new Random();
+// int[,] array = new int[random.Next(1, 10), random.Next(1, 10)];
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = random.Next(1, 10);
+//         Console.Write(array[i, j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine("---------------------------");
+
+// for (int j = 0; j < array.GetLength(1); j++)
+// {
+//     double sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         sum += array[i, j];
+//     }
+//     Console.WriteLine($"Среднее арифметическое столбца: { sum / array.GetLength(0):f1} ");
+// }
+// Console.WriteLine();
